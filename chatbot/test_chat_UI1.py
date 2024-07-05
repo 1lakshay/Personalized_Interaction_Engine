@@ -12,6 +12,9 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from dotenv import load_dotenv
+
+load_dotenv("keys.env")
 
 # extracting URL
 def get_site_url():
@@ -28,11 +31,6 @@ def polishing(result):
         return result[len(prefix):]
     else:
         return result
-
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ['LANGCHAIN_TRACING_V2'] = 'true'
-os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = os.getenv("LANGCHAIN_API_KEY")
 
 # intializing the model
 llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
