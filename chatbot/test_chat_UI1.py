@@ -29,10 +29,10 @@ def polishing(result):
     else:
         return result
 
-os.environ["OPENAI_API_KEY"] = "api-key"
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = "api-key"
+os.environ['LANGCHAIN_API_KEY'] = os.getenv("LANGCHAIN_API_KEY")
 
 # intializing the model
 llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
