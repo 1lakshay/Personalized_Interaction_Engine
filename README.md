@@ -37,7 +37,7 @@ with file location as: xampp\htdocs\wordpress\wp-content\plugins
 
 with the creating of the plugin it can beintegrated in anyw ordpress website with the inclusion of the shortcode which is chatbot_lakshay in this case.
 
-### Integration og plugin in wp website:
+### Integration of plugin in wp website:
 ![image](https://github.com/1lakshay/gourinath-wasserstoff-AiTask/assets/92805477/b9096118-5ea8-48b2-9dbb-101ad02670a1)
 
 
